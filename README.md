@@ -18,18 +18,20 @@ Face recognition using opencv.
 
 ### REQUIRED MODULES :
 Following modules were used :
-cv2: This is the OpenCV module for Python used for face detection and face recognition.
-os: We will use this Python module to read our training directories and file names.
-numpy: This module converts Python lists to numpy arrays as OpenCV face recognizer needs them for the face recognition process.
-1. PREPARE TRAINING DATA :
+- cv2: This is the OpenCV module for Python used for face detection and face recognition.
+- os: We will use this Python module to read our training directories and file names.
+-numpy: This module converts Python lists to numpy arrays as OpenCV face recognizer needs them for the face recognition process.
+
+
+#### 1. PREPARE TRAINING DATA :
 The premise here is simple:
 The more images used in training, the better.
 Being thorough with this principle is important because it is the only way for training a face recognizer so it can learn the different ‘faces’ of the same person; for example: with glasses, without glasses, laughing, sad, happy, crying, with a beard, without a beard, etc.
 So, our training data consists of total two people with 100 images of each one. All training data is inside the folder:training-data.
-2. DATA PREPARATION FOR FACE RECOGNITION :
+#### 2. DATA PREPARATION FOR FACE RECOGNITION :
 Well, to know which face belongs to which person, OpenCV face recognizer accepts information in a particular format. In fact, it receives two vectors:
 One is the faces of all the people.
 The second is the integer labels for each face.
 For example, if we had two individuals and two images for each one. Then, the data preparation step will produce face and label vectors.
-3. PREDICTION :
+#### 3. PREDICTION :
 This is where we get to see if our algorithm is recognizing our individual faces or not.We’re going to take one test image of each person, use face detection and then pass those faces to our trained face recognizer. Then we find out if our face recognition is successful.
